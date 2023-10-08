@@ -17,7 +17,7 @@ public class Chain {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "chain_id")
-    private Byte id;
+    private Long id;
     @Column(name = "chain_name")
     private String chainName;
 

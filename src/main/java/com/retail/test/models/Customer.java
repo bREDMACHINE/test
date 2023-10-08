@@ -15,12 +15,12 @@ import java.util.Objects;
 public class Customer {
 
     @Id
-    @Column(name = "CH3_ship_to_code")
-    private Integer CH3ShipToCode;
-    @Column(name = "CH3_ship_to_name")
+    @Column(name = "ship_to_code")
+    private Long CH3ShipToCode;
+    @Column(name = "ship_to_name")
     private String CH3ShipToName;
     @ManyToOne
-    @JoinColumn(name = "chain_chain_id")
+    @JoinColumn(name = "chains")
     private Chain chains;
 
     @Override

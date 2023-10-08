@@ -24,16 +24,18 @@ public class Actual {
     @JoinColumn(name = "product_material_no")
     private Product product;
     @ManyToOne
-    @JoinColumn(name = "customer_ch_3_ship_to_code")
+    @JoinColumn(name = "customer")
     private Customer customer;
     @ManyToOne
-    @JoinColumn(name = "chain_chain_id")
-    private Chain chain;
+    @JoinColumn(name = "chains")
+    private Chain chains;
     @Column(name = "volume_units")
     private Short volumeOrUnits;
     @Column(name = "actual_sales_value")
     private Float actualSalesValue;
-    private Boolean promo;
+    @Column(name = "promo_sign")
+    @Enumerated(EnumType.STRING)
+    private Sign promoSign;
 
     @Override
     public boolean equals(Object o) {

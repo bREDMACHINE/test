@@ -16,11 +16,11 @@ public class Product {
 
     @Id
     @Column(name = "material_no")
-    private Integer materialNo;
+    private Long materialNo;
     @Column(name = "material_desc_rus")
     private String materialDescRUS;
     @ManyToOne
-    @JoinColumn(name = "category_l_3_product_category_code")
+    @JoinColumn(name = "category")
     private Category category;
 
     @Override

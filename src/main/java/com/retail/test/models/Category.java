@@ -18,17 +18,17 @@ import java.util.Objects;
 public class Category {
 
     @Id
-    @Column(name = "L3_product_category_code")
-    private Integer L3ProductCategoryCode;
-    @Column(name = "L3_product_category_name")
-    private String L3ProductCategoryName;
+    @Column(name = "product_category_code")
+    private Long productCategoryCode;
+    @Column(name = "product_category_name")
+    private String productCategoryName;
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) return false;
         Category category = (Category) o;
-        return L3ProductCategoryCode != null && Objects.equals(L3ProductCategoryCode, category.L3ProductCategoryCode);
+        return productCategoryCode != null && Objects.equals(productCategoryCode, category.productCategoryCode);
     }
 
     @Override

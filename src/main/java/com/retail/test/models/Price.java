@@ -19,7 +19,7 @@ public class Price {
     @Column(name = "price_id")
     private Long id;
     @ManyToOne
-    @JoinColumn(name = "chain_chain_id")
+    @JoinColumn(name = "chains")
     private Chain chains;
     @ManyToOne
     @JoinColumn(name = "product_material_no")
